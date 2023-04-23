@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 /**
- * option - Stucture for Option
+ * struct option - Stucture for Option
  * @flag: String
  * @fun: Pointer to function.
  *
