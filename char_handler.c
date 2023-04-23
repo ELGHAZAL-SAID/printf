@@ -7,7 +7,7 @@
 */
 
 
-int char_handler(va_list arg, char buffer, unsigned int buffer_size)
+int char_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	char value;
 
