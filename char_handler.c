@@ -1,12 +1,11 @@
 #include "main.h"
-
 /**
-* char_handler: handle charachters
-* @arg: args counter
-* Return: len of char
-*/
-
-
+ * char_handler - handle charachters
+ * @arg: args counter
+ * @buffer: String
+ * @buffer_size: unsigned integer
+ * Return: Always 1
+ */
 int char_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	char value;
