@@ -15,12 +15,15 @@
 typedef struct option
 {
 	char *flag;
-	void (*fun)();
+	void (*fun)(va_list);
 
 } opt;
 
 /*functions Prototypes */
+unsigned int specifier(const char *sp);
 int _printf(const char *format, ...);
+void char_handler(va_list arg);
+
 
 
 /*helper functions prototypes */
