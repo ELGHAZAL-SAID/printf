@@ -21,7 +21,10 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-			{	_putchar(buffer, ibuf), free(buffer), va_end(arguments);
+			{	
+				_putchar(buffer, ibuf);
+				free(buffer);
+				va_end(arguments);
 				return (-1);
 			}
 			else
@@ -30,12 +33,14 @@ int _printf(const char *format, ...)
 				{
 					if (format[i + 1] == ' ' && !format[i + 2])
 						return (-1);
-					buffer_handler(buffer, format[i], ibuf), len++, i--;
+					buffer_handler(buffer, format[i], ibuf);
+					len++;
+					i--;
 				}
 				else
 				{
 					len += function(arguments, buffer, ibuf);
-					i += ev_print_func(format, i + 1);
+					i += flags(format, i + 1);
 				}
 			} i++;
 		}
@@ -44,6 +49,8 @@ int _printf(const char *format, ...)
 		for (ibuf = len; ibuf > 1024; ibuf -= 1024)
 			;
 	}
-	_putchar(buffer, ibuf), free(buffer), va_end(arguments);
+	_putchar(buffer, ibuf);
+	free(buffer);
+	va_end(arguments);
 	return (len);
 }

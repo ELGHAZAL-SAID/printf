@@ -5,7 +5,7 @@
  * @index: Integer
  * Return: Integer
  */
-int flags(const char *s, int index)
+int flags(const char *s, int idx)
 {
 	opt pr[] = {
 		{"c", char_handler},
@@ -20,19 +20,19 @@ int flags(const char *s, int index)
 	f_idx = idx;
 	while (pr[i].flag)
 	{
-		if (s[index] == pr[i].flag[cmp])
+		if (s[idx] == pr[i].flag[cmp])
 		{
 			if (pr[i].flag[cmp + 1] != '\0')
 			{
 				idx++;
-		       		j++;
+		       		cmp++;
 			}
 			else
 				break;
 		}
 		else
 		{
-			j = 0;
+			cmp = 0;
 			i++;
 			idx = f_idx;
 		}

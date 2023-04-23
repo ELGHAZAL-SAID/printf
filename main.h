@@ -34,7 +34,7 @@ int per_handler(va_list arg __attribute__((unused)), char *buffer, unsigned int 
 /*buffer handlers*/
 unsigned int buffer_handler(char *buffer, char ch, unsigned int buffer_size);
 int _putchar(char *buffer, int buffersize);
-int ev_print_func(const char *s, int index);
+int flags(const char *s, int idx);
 
 
 /*helper functions prototypes */
