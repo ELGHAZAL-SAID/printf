@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * print_handler - pointer to function
+ * @sp: String
+ * @idx: Integer
+ * Return: Integer
+ */
 int (*print_handler(const char *sp, int idx))(va_list, char *, unsigned int)
 {
 	opt con[] = {
