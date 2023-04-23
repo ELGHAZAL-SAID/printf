@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _printf - function for printing
+ * @format: String
+ * Return: Integer
+ */
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, len = 0, ibuf = 0;
