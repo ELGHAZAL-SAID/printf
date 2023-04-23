@@ -1,8 +1,7 @@
 #include "main.h"
 
-int (*specifier(const char *sp))(va_list, char *, unsigned int)
+int (*print_handler(const char *sp, int idx))(va_list, char *, unsigned int)
 {
-	int i;
 	opt con[] = {
 		{'c', char_handler},
 		{'s', string_handler},
@@ -10,10 +9,15 @@ int (*specifier(const char *sp))(va_list, char *, unsigned int)
 		{'i', di_handler},
 		{0, 0}
 	};
+	int i = 0, j = 0, f_idx;
+	f_idx = idx;
 
-	for (i = 0; con[i].fun; i++)
+	while (con[i].fun)
 	{
-		if (con[i].flag == *sp)
+		if (s[idx] == con[i].fun[j])
+		{
+			i
+		}
 			return (con[i].fun);
 	}
 
