@@ -1,5 +1,8 @@
 #ifndef MAIN_H
-#define MAIN_
+#define MAIN_H
+
+#include <stdarg.h>
+#include <unistd.h>
 /**
  * option - Stucture for Option
  * @flag: String
@@ -13,6 +16,8 @@ typedef struct option
 	void (*fun)();
 
 } opt;
+
+/* Prototypes */
 int _printf(const char *format, ...);
 
 #endif
