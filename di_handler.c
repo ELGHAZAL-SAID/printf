@@ -3,17 +3,18 @@
 
 int di_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
-	int input;
-	char dividion,
-	unsigned int negative = 0, current_int, div_num, integer;
+	int input, i;
+	char division;
+	unsigned int negative, current_int, div_num, integer;
 
 	int value = va_arg(arg, int);
-
-	while (integer < 0)
+	input = value;
+	negative = 0;
+	if (input < 0)
 	{
-		integer = -(value);
+		integer = -1 * value;
 		buffer_size = buffer_handler(buffer, '-', buffer_size);
-		negative = 0;
+		negative = 1;
 	}
 	else
 		integer = value;
