@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
  * flags - Function for flags
  * @s: String
- * @index: Integer
+ * @idx: Integer
  * Return: Integer
  */
 int flags(const char *s, int idx)
@@ -25,7 +26,7 @@ int flags(const char *s, int idx)
 			if (pr[i].flag[cmp + 1] != '\0')
 			{
 				idx++;
-		       		cmp++;
+				cmp++;
 			}
 			else
 				break;
