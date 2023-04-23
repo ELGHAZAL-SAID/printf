@@ -1,6 +1,6 @@
 #include "main.h"
 
-int (*specifier(const char *sp))(va_list arg)
+int (*specifier(const char *sp))(va_list, char *, unsigned int)
 {
 	int i;
 	opt con[] = {

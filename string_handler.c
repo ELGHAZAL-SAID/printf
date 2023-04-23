@@ -1,12 +1,21 @@
 #include "main.h"
 
 
-int (*specifier(const char *sp))(va_list arg)
+int string_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	char *value;
+	unsigned int j;
+	char null_value[] = "(null)";
+
 	value = va_arg(arg, char *);
-	write(1, value, sizeof(char) * char_len(value));
+	if (value == 0)
+	{
+		for (i = 0; null_value[i]; i++)
+			buffer = buffer_handler(buffer, null_value[i], buffer_size);
+		return(6);
+	}
+	for (i = 0; *(value + i); i++)
+		buffer_size = buffer_handler(buffer, value[i], buffer_size);
 
-	return (char_len(value));
-
+	return (i);
 }

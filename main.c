@@ -11,6 +11,6 @@
 int main(void)
 {
 
-	_printf("gfac", 'a');
+	_printf("gsac", 'a', "binom fih n3ass");
 	return 0;
 }
