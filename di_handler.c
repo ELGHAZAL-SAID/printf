@@ -11,7 +11,7 @@ int di_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	int input, i;
 	char division;
-	unsigned int negative, current_int, div_num, integer;
+	unsigned int negative, current_int, div_num = 1, integer;
 	int value = va_arg(arg, int);
 
 	input = value;
