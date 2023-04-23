@@ -1,4 +1,4 @@
-
+#include "main.h"
 /**
 * char_len - calc chars lenght
 * @c: character or string

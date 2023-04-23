@@ -7,11 +7,13 @@
 */
 
 
-void char_handler(va_list arg)
+int char_handler(va_list arg)
 {
 	char value;
 
-	value = va_arg(arg, char);
+	value = va_arg(arg, int);
 
-	write(1, value, sizeof(char));
+	write(1, &value, sizeof(char));
+
+	return (1);
 }

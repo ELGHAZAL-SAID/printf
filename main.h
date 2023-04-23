@@ -14,16 +14,17 @@
 
 typedef struct option
 {
-	char *flag;
-	void (*fun)(va_list);
+	char flag;
+	int (*fun)(va_list);
 
 } opt;
 
 /*functions Prototypes */
-unsigned int specifier(const char *sp);
+int (*specifier(const char *sp))(va_list arg);
 int _printf(const char *format, ...);
 void char_handler(va_list arg);
-
+int di_handler(va_list arg);
+char string_handler(va_list arg);
 
 
 /*helper functions prototypes */

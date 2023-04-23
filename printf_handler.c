@@ -1,6 +1,6 @@
 #include "main.h"
 
-unsigned int specifier(const char *sp)
+int (*specifier(const char *sp))(va_list arg)
 {
 	int i;
 	opt con[] = {
@@ -8,7 +8,7 @@ unsigned int specifier(const char *sp)
 		{'s', string_handler},
 		{'d', di_handler},
 		{'i', di_handler},
-		{0, NULL}
+		{0, 0}
 	};
 
 	for (i = 0; con[i].fun; i++)
@@ -17,5 +17,5 @@ unsigned int specifier(const char *sp)
 			return (con[i].fun);
 	}
 
-	return (NULL);
+	return (0);
 }
