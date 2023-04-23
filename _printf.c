@@ -44,6 +44,6 @@ int _printf(const char *format, ...)
 		for (ibuf = len; ibuf > 1024; ibuf -= 1024)
 			;
 	}
-	print_handler(buffer, ibuf), free(buffer), va_end(arguments);
+	_putchar(buffer, ibuf), free(buffer), va_end(arguments);
 	return (len);
 }
