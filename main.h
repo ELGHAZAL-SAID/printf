@@ -28,7 +28,7 @@ int _printf(const char *format, ...);
 int char_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int di_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int string_handler(va_list arg, char *buffer, unsigned int buffer_size);
-int per_handler(va_list arg __attribute__((unused)), char *buffer, unsigned int buffer_size);
+int per_handler(va_list ar __attribute__((unused)), char *b, unsigned int bus);
 
 
 /*buffer handlers*/
