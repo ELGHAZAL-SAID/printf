@@ -1,13 +1,19 @@
 #include "main.h"
-
+/**
+ * di_handler - Function di_handler
+ * @arg: argumerts for type va_list
+ * @buffer: String
+ * @buffer_size: unsigned Integer
+ * Return: Integer
+ */
 
 int di_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	int input, i;
 	char division;
 	unsigned int negative, current_int, div_num, integer;
-
 	int value = va_arg(arg, int);
+
 	input = value;
 	negative = 0;
 	if (input < 0)
