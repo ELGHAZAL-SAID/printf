@@ -1,15 +1,15 @@
 #include "main.h"
 /**
 * to_hexadecimal - fill table with hexadecimal chars
-* @bin: table of bin
+* @binary_buffer: table of binary_buffer
 * @hex: table of octal
 * @s: Integer
 * @l: Intger
 * Return: hexadecimal_handler
 */
-char *to_hexadecimal(char *bin, char *hex, int s, int l)
+char *to_hexadecimal(char *binary_buffer, char *hex, int s, int l)
 {
-	int i, j, last, op;
+	int i, j, last, option;
 
 	hex[l] = '\0';
 	if (s)
@@ -18,13 +18,13 @@ char *to_hexadecimal(char *bin, char *hex, int s, int l)
 		last = 87;
 	for (i = (l * 4) - 1; i >= 0; i--)
 	{
-		for (op = 0, j = 1; j <= 8; j *= 2, i--)
-			op = ((*(bin + i) - '0') * j) + op;
+		for (option = 0, j = 1; j <= 8; j *= 2, i--)
+			option = ((*(binary_buffer + i) - '0') * j) + option;
 		i++;
-		if (op < 10)
-			hex[i / 4] = op + 48;
+		if (option < 10)
+			hex[i / 4] = option + 48;
 		else
-			hex[i / 4] = op + last;
+			hex[i / 4] = option + last;
 	}
 	return (hex);
 }
