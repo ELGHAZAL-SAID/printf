@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * buffer_handler - Function
+ * buffer_handler - concatinating function
  * @buffer: String
  * @ch: char
  * @buffer_size: unsigned Intger

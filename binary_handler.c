@@ -31,7 +31,7 @@ int binary_handler(va_list arg, char *buffer, unsigned int buffer_size)
 	{
 		if (first_bit == 0 && binary_handler[i] == '1')
 			first_bit = 1;
-		if (first_bit == '1')
+		if (first_bit == 1)
 		{
 			buffer_size = buffer_handler(buffer, *(binary_handler + i), buffer_size);
 			counter++;
