@@ -9,9 +9,9 @@
 */
 char *to_hexadecimal(char *bin, char *hex, int s, int l)
 {
-	int i = 0, j, last, op;
+	int i, j, last, op;
 
-	hex[l] = 0;
+	hex[l] = '\0';
 	if (s)
 		last = 55;
 	else
@@ -19,7 +19,7 @@ char *to_hexadecimal(char *bin, char *hex, int s, int l)
 	for (i = (l * 4) - 1; i >= 0; i--)
 	{
 		for (op = 0, j = 1; j <= 8; j *= 2, i--)
-			op = ((*(bin + i) - 48) * j) + op;
+			op = ((*(bin + i) - '0') * j) + op;
 		i++;
 		if (op < 10)
 			hex[i / 4] = op + 48;
