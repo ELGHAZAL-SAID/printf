@@ -13,6 +13,7 @@ int flags(const char *s, int idx)
 		{"s", string_handler},
 		{"d", di_handler},
 		{"i", di_handler},
+		{"b", binary_handler},
 		{"%", per_handler},
 		{NULL, NULL}
 	};

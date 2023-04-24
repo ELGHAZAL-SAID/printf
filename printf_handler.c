@@ -12,6 +12,7 @@ int (*print_handler(const char *sp, int idx))(va_list, char *, unsigned int)
 		{"s", string_handler},
 		{"d", di_handler},
 		{"i", di_handler},
+		{"b", binary_handler},
 		{"%", per_handler},
 		{NULL, NULL}
 	};
