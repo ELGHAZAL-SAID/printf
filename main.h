@@ -33,6 +33,8 @@ int binary_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_binary(char *binary_handler, long int input, int negative, int last);
 int octal_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_octal(char *octal_handler, char *binary_handler);
+char *to_hexadecimal(char *hex, char *bin, int s, int l);
+int hexadecimal_handler(va_list arg, char *buffer, unsigned int buffer_size);
 
 /*buffer handlers*/
 unsigned int buffer_handler(char *buffer, char ch, unsigned int buffer_size);
