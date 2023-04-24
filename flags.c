@@ -14,6 +14,7 @@ int flags(const char *s, int idx)
 		{"d", di_handler},
 		{"i", di_handler},
 		{"b", binary_handler},
+		{"o", octal_handler},
 		{"%", per_handler},
 		{NULL, NULL}
 	};

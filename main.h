@@ -31,6 +31,8 @@ int string_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int per_handler(va_list ar __attribute__((unused)), char *b, unsigned int bus);
 int binary_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_binary(char *binary_handler, long int input, int negative, int last);
+int octal_handler(va_list arg, char *buffer, unsigned int buffer_size);
+char *to_octal(char *octal_handler, long int input, int negative, int last);
 
 /*buffer handlers*/
 unsigned int buffer_handler(char *buffer, char ch, unsigned int buffer_size);
