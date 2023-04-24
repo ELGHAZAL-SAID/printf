@@ -45,7 +45,6 @@ int hexadecimal_handler(va_list arg, char *buffer, unsigned int buffer_size)
 		}
 		i++;
 	}
-	free(bin);
 	free(hex);
 	return (counter);
 }
