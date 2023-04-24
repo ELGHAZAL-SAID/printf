@@ -35,6 +35,8 @@ int octal_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_octal(char *octal_handler, char *binary_handler);
 int hexadecimal_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_hexadecimal(char *hex, char *bin, int s, int l);
+int upper_hexa_handler(va_list arg, char *buffer, unsigned int buffer_size);
+int unsigned_handler(va_list arg, char *buffer, unsigned int buffer_size);
 
 
 
