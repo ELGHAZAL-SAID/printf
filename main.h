@@ -29,7 +29,7 @@ int char_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int di_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int string_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int per_handler(va_list ar __attribute__((unused)), char *b, unsigned int bus);
-
+int binary_handler(va_list arg, char *buffer, unsigned int buffer_size);
 
 /*buffer handlers*/
 unsigned int buffer_handler(char *buffer, char ch, unsigned int buffer_size);

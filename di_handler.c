@@ -24,9 +24,7 @@ int di_handler(va_list arg, char *buffer, unsigned int buffer_size)
 	}
 	else
 		integer = value;
-
 	current_int = integer;
-
 	while (current_int > 9)
 	{
 		div_num *= 10;
