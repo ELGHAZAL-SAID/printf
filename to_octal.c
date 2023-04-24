@@ -2,40 +2,24 @@
 /**
 * to_octal - fill table with octal chars
 * @binary_handler: table
-* @input: integer input
-* @negative: check if input negative
-* @last: presents the limit (11 for integrs)
+* @octal_handler: table of octal
 * Return: octal_handler
 */
-char *to_octal(char *octal_handler, long int input, int negative, int last)
+char *to_octal(char *octal_handler, char *binary_handler)
 {
-	int i = 0;
+	int i = 0, octal_size, octal, j, last;
 
-	while (i < last)
+	octal_handler[11] = 0;
+	for (i = 31, octal_size = 10; i >= 0; i--, octal_size--)
 	{
-		octal_handler[i] = '0';
-		i++;
-	}
-
-	octal_handler[last] = 0;
-
-	for (i = last - 1; input > 1; i--)
-	{
-		if (input == 2)
-			octal_handler[i] = '0';
+		if (i > 1)
+			last  = 4;
 		else
-			octal_handler[i] = (input % 8) + 48;
-		input = input / 8;
-	}
-	if (input != 0)
-		octal_handler[i] = 49;
-	if (negative)
-	{
-		for (i = 0; *(octal_handler + i); i++)
-			if (*(octal_handler + i) == 49)
-				octal_handler[i] = 48;
-			else
-				*(octal_handler + i) = 49;
+			last = 2;
+		for (octal = 0, j = 1; j <= last; j *= 2, i--)
+			octal = ((*(binary_handler + i) - 48) * j) + octal;
+		i++;
+		octal_handler[octal_size] = octal + '0';
 	}
 	return (octal_handler);
 }
