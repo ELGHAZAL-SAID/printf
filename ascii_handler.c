@@ -17,7 +17,7 @@ int ascii_handler(va_list arg, char *buffer, unsigned int buffer_size)
 
 	while (input[i])
 	{
-		if (input[i] < 32 || input >= 127)
+		if (input[i] < 32 || input[i] >= 127)
 		{
 			buffer_size = buffer_handler(buffer, '\\', buffer_size);
 			buffer_size = buffer_handler(buffer, 'x', buffer_size);
@@ -34,5 +34,5 @@ int ascii_handler(va_list arg, char *buffer, unsigned int buffer_size)
 		i++;
 	}
 	free(hexa_d);
-	return (counter);
+	return (i + sum);
 }

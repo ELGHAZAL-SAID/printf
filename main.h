@@ -37,7 +37,7 @@ int hexadecimal_handler(va_list arg, char *buffer, unsigned int buffer_size);
 char *to_hexadecimal(char *hex, char *bin, int s, int l);
 int upper_hexa_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int unsigned_handler(va_list arg, char *buffer, unsigned int buffer_size);
-
+int ascii_handler(va_list arg, char *buffer, unsigned int buffer_size);
 
 
 /*buffer handlers*/
@@ -48,6 +48,5 @@ int flags(const char *s, int idx);
 
 /*helper functions prototypes */
 int char_len(char *c);
-
 
 #endif
