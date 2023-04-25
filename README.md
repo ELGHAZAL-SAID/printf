@@ -204,13 +204,52 @@ Handle the following conversion specifiers:
 
 -   GitHub repository: `printf`
 
-### 2\. Just because it's in print doesn't mean it's the gospel
 
-mandatory
+### 2\. With a face like mine, I do better in print
 
-Create a man page for your function.
+Handle the following custom conversion specifiers:
+
+-   b: the unsigned int argument is converted to binary
+
+```
+alex@ubuntu:~/c/printf$ cat main.c
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%b\n", 98);
+    return (0);
+}
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
+alex@ubuntu:~/c/printf$
+```
 
 **Repo:**
 
 -   GitHub repository: `printf`
--   File: `man_3_printf`
+
+### 3\. What one has not experienced, one will never understand in print
+
+Handle the following conversion specifiers:
+
+-   u
+-   o
+-   x
+-   X
+-   You don’t have to handle the flag characters
+-   You don’t have to handle field width
+-   You don’t have to handle precision
+-   You don’t have to handle the length modifiers
+
+**Repo:**
+
+-   GitHub repository: `printf`
+
+
