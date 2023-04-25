@@ -19,6 +19,7 @@ int flags(const char *s, int idx)
 		{"x", hexadecimal_handler},
 		{"X", upper_hexa_handler},
 		{"S", ascii_handler},
+		{"p", address_handler},
 		{"%", per_handler},
 		{NULL, NULL}
 	};
