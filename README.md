@@ -313,7 +313,7 @@ Handle the following custom conversion specifier:
 
 -   GitHub repository: `printf`
 
-###14. The flood of print has turned reading into a process of gulping rather than savoring
+### 14. The flood of print has turned reading into a process of gulping rather than savoring
 
 Handle the following custom conversion specifier:
 
