@@ -39,7 +39,8 @@ int upper_hexa_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int unsigned_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int ascii_handler(va_list arg, char *buffer, unsigned int buffer_size);
 int address_handler(va_list arg, char *buffer, unsigned int buffer_size);
-
+int reverse_handler(va_list arg, char *buffer, unsigned int buffer_size);
+int rot13_handler(va_list arg, char *buffer, unsigned int buffer_size);
 
 
 /*buffer handlers*/

@@ -21,6 +21,8 @@ int flags(const char *s, int idx)
 		{"S", ascii_handler},
 		{"p", address_handler},
 		{"%", per_handler},
+		{"r", reverse_handler},
+		{"R", rot13_handler},
 		{NULL, NULL}
 	};
 	int i = 0, cmp = 0, f_idx;

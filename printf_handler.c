@@ -20,6 +20,8 @@ int (*print_handler(const char *sp, int idx))(va_list, char *, unsigned int)
 		{"S", ascii_handler},
 		{"p", address_handler},
 		{"%", per_handler},
+		{"r", reverse_handler},
+		{"R", rot13_handler},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0, f_idx;
