@@ -34,5 +34,5 @@ int rot13_handler(va_list arg, char *buffer, unsigned int buffer_size)
 			}
 		}
 	}
-	return ();
+	return (i);
 }
