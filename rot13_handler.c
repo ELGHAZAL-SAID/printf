@@ -9,7 +9,7 @@
 int rot13_handler(va_list arg, char *buffer, unsigned int buffer_size)
 {
 	char *value;
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0, j = 0, k = 0;
 	char null_value[] = "(null)";
 	char tab1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char tab2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -25,14 +25,17 @@ int rot13_handler(va_list arg, char *buffer, unsigned int buffer_size)
 	}
 	for (i = 0; *(value + i); i++)
 	{
-		for (j = 0; tab1[j] != 0; j++)
+		for (k = j = 0; tab1[j] != 0; j++)
 		{
 			if (*(value + i) == tab1[j])
 			{
+				k = 1;
 				buffer_size = buffer_handler(buffer, tab2[j], buffer_size);
 				break;
 			}
 		}
+		if (k == 0)
+			 buffer_size = buffer_handler(buffer, *(value + i), buffer_size);
 	}
 	return (i);
 }
