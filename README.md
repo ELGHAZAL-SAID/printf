@@ -304,4 +304,11 @@ Handle the following conversion specifier: `p`.
 
 -   GitHub repository: `printf`
 
+### 13. Print is the sharpest and the strongest weapon of our party
 
+Handle the following custom conversion specifier:
+-	`p`:prints the reversed string
+
+**Repo:**
+
+-   GitHub repository: `printf`
